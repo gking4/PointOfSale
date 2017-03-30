@@ -23,8 +23,8 @@ function addItem()
     Number(newItem);
     runningTotal += newItem;
     var dollars = asCurrency(runningTotal);
-    document.getElementById(subtotal = dollars);
-    document.getElementById(price = " ");
+    document.getElementById('subtotal').innerHTML = dollars;
+    document.getElementById('price').value = " ";
     document.cookie = "preTax = " + runningTotal; 
     
   }
@@ -61,13 +61,13 @@ function getCookie(cname) {
 
 calculateReceipt()
 {
-  var receiptSubtotal = getCookie(preTax);
+  var receiptSubtotal = getCookie("preTax");
   Number(receiptSubtotal);
   var receiptTax = receiptSubtotal * 0.075;
   var receiptTotal = receiptSubtotal + receiptTax;
-  document.getElementById(sub = receiptSubtotal);
-  document.getElementById(tax = receiptTax);
-  document.getElementById(tot = receiptTotal);
+  document.getElementById('sub').innerHTML = "$" + receiptSubtotal;
+  document.getElementById('tax').innerHTML = "$" + receiptTax;
+  document.getElementById('tot').innerHTML = "$" + receiptTotal;
   
 
 }
