@@ -6,7 +6,7 @@ function addItem()
   newItem = document.getElementById("price").value;
   //IF newItem is not a number
   // THEN show an alert: "Enter price as a number"
-  if(isNan(newItem))
+  if(isNaN(newItem))
   {
     window.alert("Enter price as a number.");
   }
@@ -59,7 +59,7 @@ function getCookie(cname) {
     return "";
 }
 
-calculateReceipt()
+function calculateReceipt()
 {
   var receiptSubtotal = getCookie("preTax");
   Number(receiptSubtotal);
